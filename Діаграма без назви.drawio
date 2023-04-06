@@ -1,9 +1,138 @@
-<mxfile host="app.diagrams.net" modified="2023-04-06T17:18:19.281Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" version="21.1.4" etag="tqgZIdFilLF7WDw_RGPy" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-06T18:24:59.039Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="FeeRDiuabYpSrnMVyu2Q" version="21.1.4" type="github">
   <diagram name="Сторінка-1" id="AXeGTkZt2nIttVYTKhM_">
-    <mxGraphModel>
+    <mxGraphModel dx="2862" dy="1113" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-1" value="CoreLogic API" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-2" value="HTTP &lt;br&gt;HTTP Get&amp;nbsp; =&amp;gt; GetElevationAndSlope?inspectionId=100" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="235" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-3" value="CoreLogic Infrastructure" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="670" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-6" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="onCVarHiP9ZqFbgdbyJ_-1" target="onCVarHiP9ZqFbgdbyJ_-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="330" y="250" as="sourcePoint" />
+            <mxPoint x="490" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-7" value="Call IElevationService.GetElevation" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="240" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-8" value="IQuarable&amp;lt;ElevationEntity&amp;gt;&lt;br&gt;&lt;br&gt;Example:&lt;br&gt;Elevations.Where(el =&amp;gt; el.inspectionId == inspectionId).FirstOrDefault()&lt;br&gt;&lt;br&gt;Our example:&amp;nbsp;&lt;br&gt;_repository.Quarable(el =&amp;gt;el =&amp;gt; el.inspectionId == inspectionId).FirstOrDefault()&lt;br&gt;&lt;br&gt;Another Example (if inspectionId is primary key):&lt;br&gt;_repository.GetbyId(id)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="990" y="320" width="290" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-9" value="Database" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="440" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-10" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="onCVarHiP9ZqFbgdbyJ_-8" target="onCVarHiP9ZqFbgdbyJ_-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="240" y="534.5" as="sourcePoint" />
+            <mxPoint x="390" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-11" value="Convert IQuarable into sql query&lt;br&gt;&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="430" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-12" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="onCVarHiP9ZqFbgdbyJ_-9" target="onCVarHiP9ZqFbgdbyJ_-8">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="150" y="680" as="sourcePoint" />
+            <mxPoint x="310" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-13" value="return one ElevationEntity if it exist" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="580" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-14" value="Repository&amp;lt;ElevationEntity&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="30" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-17" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint y="280" as="sourcePoint" />
+            <mxPoint x="285" y="279.09000000000003" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-19" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="onCVarHiP9ZqFbgdbyJ_-3" target="onCVarHiP9ZqFbgdbyJ_-14">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="370" y="300" as="sourcePoint" />
+            <mxPoint x="530" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-21" value="Get Elevation By Inspection Id" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=130;height=60;" vertex="1" parent="1">
+          <mxGeometry x="960" y="150" width="770" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-23" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="onCVarHiP9ZqFbgdbyJ_-14" target="onCVarHiP9ZqFbgdbyJ_-21">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1350" y="310" as="sourcePoint" />
+            <mxPoint x="1510" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-27" value="" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=-0.002;exitY=0.451;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="onCVarHiP9ZqFbgdbyJ_-21" target="onCVarHiP9ZqFbgdbyJ_-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="950" y="400" as="sourcePoint" />
+            <mxPoint x="1110" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-28" value="Return Elevation or null (need to throw KeyNotFound exception)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="580" y="380" width="360" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-30" value="" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="onCVarHiP9ZqFbgdbyJ_-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="665" y="375" as="sourcePoint" />
+            <mxPoint x="400" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-31" value="return ElevationDto/ElevationEntity" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="415" y="305" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-32" value="" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=block;endFill=1;dashed=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="onCVarHiP9ZqFbgdbyJ_-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="270" y="305" as="sourcePoint" />
+            <mxPoint y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-33" value="return ElevationResponce" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="310" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-34" value="ElevationEntity" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="460" width="220" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-35" value="+ inspectionId: decimal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="onCVarHiP9ZqFbgdbyJ_-34">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-36" value="+ elevation: decimal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="onCVarHiP9ZqFbgdbyJ_-34">
+          <mxGeometry y="52" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-37" value="+ slope: decimal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="onCVarHiP9ZqFbgdbyJ_-34">
+          <mxGeometry y="78" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-39" value="ElevationDto" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="460" width="220" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-40" value="+ inspectionId: decimal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="onCVarHiP9ZqFbgdbyJ_-39">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-41" value="+ elevation: decimal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="onCVarHiP9ZqFbgdbyJ_-39">
+          <mxGeometry y="52" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-42" value="+ slope: decimal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="onCVarHiP9ZqFbgdbyJ_-39">
+          <mxGeometry y="78" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-43" value="ElevationResponce" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="65" y="460" width="220" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-44" value="+ inspectionId: decimal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="onCVarHiP9ZqFbgdbyJ_-43">
+          <mxGeometry y="26" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-45" value="+ elevation: decimal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="onCVarHiP9ZqFbgdbyJ_-43">
+          <mxGeometry y="52" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="onCVarHiP9ZqFbgdbyJ_-46" value="+ slope: decimal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="onCVarHiP9ZqFbgdbyJ_-43">
+          <mxGeometry y="78" width="220" height="26" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
